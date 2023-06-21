@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  threejs:
+    build: .
+    command: /bin/sh -c "pnpm install && pnpm run start --host"
+    volumes:
+      - .:/threejs
+    ports:
+      - "3000:3000"
+      - "5173:5173"
+    tty: true
