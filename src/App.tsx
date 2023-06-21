@@ -7,25 +7,14 @@ import Footer from "./Footer";
 
 // caaのインポート
 import "./App.css";
+import ModelView from "./ModelView";
 
 function App() {
   return (
     <div className="App">
-      {/* ここから削除 */}
-      <span
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          translate: "-50% -50%",
-          fontSize: "50px",
-          fontWeight: "bold",
-          color: "#c34eff",
-        }}
-      >
-        C3×OPTiM
-      </span>
-      {/* ここまで */}
+      <Canvas className="canvas">
+        <ModelView model_url="/model1.obj" key={0} />
+      </Canvas>
       <Footer />
     </div>
   );
